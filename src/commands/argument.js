@@ -150,13 +150,13 @@ class Argument {
 			const embed = new Discord.RichEmbed()
 			.setColor('RANDOM')
 			.setFooter('Clowning', 'https://cdn.discordapp.com/avatars/405061771792220160/894f1368ac2749b671141ee160dcc895.png?size=2048')
-			.setAuthor("Komut Girişi <:onayli:409360802332540928>", 'https://cdn.discordapp.com/avatars/405061771792220160/894f1368ac2749b671141ee160dcc895.png?size=2048')
+			.setAuthor("Giriş;", 'https://cdn.discordapp.com/avatars/405061771792220160/894f1368ac2749b671141ee160dcc895.png?size=2048')
 			.setDescription(stripIndents`
 			${!value ? this.prompt : valid ? valid : `Geçersiz bir ${this.label} yazdınız. Lütfen tekrar deneyin.`}
 			${oneLine`
 			`}
 			`)
-			.setFooter(`Komutu iptal etmek için "iptal" yazın. ${wait ? ` Otomatik olarak ${this.wait} saniye içinde iptal edilecektir.` : ''}`);
+			.setFooter(`Komutu iptal etmek için "iptal" yazın. ${wait ? ` Otomatik olarak ${this.wait} saniye içinde iptal edilecektir.`,'https://cdn.discordapp.com/avatars/405061771792220160/894f1368ac2749b671141ee160dcc895.png?size=2048' : ''}`);
 
 			// Prompt the user for a new value
 			prompts.push(await msg.channel.send({embed}));
