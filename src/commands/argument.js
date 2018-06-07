@@ -156,7 +156,7 @@ class Argument {
 			${oneLine`
 			`}
 			`)
-			.setFooter(`Komutu iptal etmek için "iptal" yazın. ${wait ? ` Otomatik olarak ${this.wait} saniye içinde iptal edilecektir.`,'https://cdn.discordapp.com/avatars/405061771792220160/894f1368ac2749b671141ee160dcc895.png?size=2048' : ''}`);
+			.setFooter(`Komutu iptal etmek için "iptal" yazın. ${wait ? ` Otomatik olarak ${this.wait} saniye içinde iptal edilecektir.` : ''}`);
 
 			// Prompt the user for a new value
 			prompts.push(await msg.channel.send({embed}));
