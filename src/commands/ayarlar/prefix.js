@@ -4,8 +4,8 @@ const Command = require('../base');
 module.exports = class PrefixCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'ön-ek',
-			aliases: ['prefix', 'önek', 'prefixdeğiş', 'önekdeğiş'],
+			name: 'asdasd',
+			aliases: ['asdsada'],
 			group: 'ayarlar',
 			memberName: 'ön-ek',
 			description: "Komut ön-ek'ini gösterir/değiştirir.",
