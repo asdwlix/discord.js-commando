@@ -149,7 +149,8 @@ class Argument {
 		        
 			const embed = new Discord.RichEmbed()
 			.setColor('RANDOM')
-			.setTitle("Komut Girişi")
+			.setFooter(client.user.username,client.user.avatarURL)
+			.setAuthor("Komut Girişi <:onayli:409360802332540928>", client.user.avatarURL)
 			.setDescription(stripIndents`
 			${!value ? this.prompt : valid ? valid : `Geçersiz bir ${this.label} yazdınız. Lütfen tekrar deneyin.`}
 			${oneLine`
