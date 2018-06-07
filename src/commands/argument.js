@@ -149,8 +149,8 @@ class Argument {
 		        
 			const embed = new Discord.RichEmbed()
 			.setColor('RANDOM')
-			.setFooter(client.user.username,client.user.avatarURL)
-			.setAuthor("Komut Girişi <:onayli:409360802332540928>", client.user.avatarURL)
+			.setFooter('Clowning', 'https://cdn.discordapp.com/avatars/405061771792220160/894f1368ac2749b671141ee160dcc895.png?size=2048')
+			.setAuthor("Komut Girişi <:onayli:409360802332540928>", 'https://cdn.discordapp.com/avatars/405061771792220160/894f1368ac2749b671141ee160dcc895.png?size=2048')
 			.setDescription(stripIndents`
 			${!value ? this.prompt : valid ? valid : `Geçersiz bir ${this.label} yazdınız. Lütfen tekrar deneyin.`}
 			${oneLine`
