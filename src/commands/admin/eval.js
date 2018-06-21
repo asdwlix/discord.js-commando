@@ -10,9 +10,9 @@ const nlPattern = new RegExp(nl, 'g');
 module.exports = class EvalCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'eval',
+			name: 'evalsss',
 			group: 'admin',
-			memberName: 'eval',
+			memberName: 'evalssss',
 			description: 'JavaScript kodunu dener.',
 			details: 'Sadece bot yapımcısı iznine sahip olan kişiler bu komutu kullanabilir.',
 
