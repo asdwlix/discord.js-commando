@@ -149,7 +149,7 @@ class Argument {
 		        
 			const embed = new Discord.RichEmbed()
 			.setColor(0x36393e)
-			.setFooter('Clowning', 'https://cdn.discordapp.com/avatars/405061771792220160/894f1368ac2749b671141ee160dcc895.png?size=2048')
+			.setAuthor('Komut Girişi;', 'https://cdn.discordapp.com/avatars/405061771792220160/18a566c2795953951d86db7b005ab508.png?size=2048')
 			.setDescription(stripIndents`
 			${!value ? this.prompt : valid ? valid : `Geçersiz bir ${this.label} yazdınız. Lütfen tekrar deneyin.`}
 			${oneLine`
