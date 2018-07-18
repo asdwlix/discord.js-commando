@@ -133,7 +133,7 @@ class CommandMessage {
 		}
 		if(!this.command.hasPermission(this)) {
 			this.client.emit('commandBlocked', this, 'permission');
-			return this.reply(`\`${this.command.name}\` komutunu kullanmak için gerekli izne sahip değilsin!`);
+			return this.reply(`\`${this.command.name}\` you don't have the necessary permission to use the command!`);
 		}
 
 		// Throttle the command
@@ -142,7 +142,7 @@ class CommandMessage {
 			const remaining = (throttle.start + (this.command.throttling.duration * 1000) - Date.now()) / 1000;
 			this.client.emit('commandBlocked', this, 'throttling');
 			return this.reply(
-				`DUR! \`${this.command.name}\` komutunu ${remaining.toFixed(1)} saniye sonra kullanabilirsin.`
+				`<:timeout:467679627863916574> Please calm down im on fire! (**${remaining.toFixed(1)}** seconds left)`
 			);
 		}
 
@@ -159,7 +159,7 @@ class CommandMessage {
 					const err = new CommandFormatError(this);
 					return this.reply(err.message);
 				}
-				return this.reply('Komut iptal edildi.');
+				return this.reply('Commands cancelled');
 			}
 			args = result.values;
 		}
@@ -217,7 +217,7 @@ class CommandMessage {
 				return this.reply(stripIndents`
 					Komutu kullanırken bir hata oluştu!: \`${err.name}: ${err.message}\`
 					Lütfen bildirin: https://discord.gg/EGxHua6
-					Sahib: AlperS#4640
+					Sahib: AlperS#4640, Cautrizes 🐉#1122
 				`);
 			}
 		}
