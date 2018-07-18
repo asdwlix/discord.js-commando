@@ -149,13 +149,13 @@ class Argument {
 		        
 			const embed = new Discord.RichEmbed()
 			.setColor(0x36393e)
-			.setAuthor('Komut Girişi;', 'https://cdn.discordapp.com/avatars/405061771792220160/18a566c2795953951d86db7b005ab508.png?size=2048')
+			.setAuthor('Command Input;', 'https://cdn.discordapp.com/avatars/405061771792220160/18a566c2795953951d86db7b005ab508.png?size=2048')
 			.setDescription(stripIndents`
 			${!value ? this.prompt : valid ? valid : `Geçersiz bir ${this.label} yazdınız. Lütfen tekrar deneyin.`}
 			${oneLine`
 			`}
 			`)
-			.setFooter(`Komutu iptal etmek için "iptal" yazın. ${wait ? ` Otomatik olarak ${this.wait} saniye içinde iptal edilecektir.` : ''}`);
+			.setFooter(`Respond with cancel to "cancel" the command. The command will automatically be cancelled in 30 seconds.`);
 
 			// Prompt the user for a new value
 			prompts.push(await msg.channel.send({embed}));
@@ -180,7 +180,7 @@ class Argument {
 			}
 
 			// See if they want to cancel
-			if(value.toLowerCase() === 'iptal') {
+			if(value.toLowerCase() === 'cancel') {
 				return {
 					value: null,
 					cancelled: 'user',
@@ -243,7 +243,7 @@ class Argument {
 							Please try again.
 						`}
 						${oneLine`
-							Respond with \`iptal\` to cancel the command, or \`bitir\` to finish entry up to this point.
+							Respond with \`cancel\` to cancel the command, or \`bitir\` to finish entry up to this point.
 							${wait ? `The command will automatically be cancelled in ${this.wait} seconds.` : ''}
 						`}
 					`));
@@ -286,7 +286,7 @@ class Argument {
 						answers
 					};
 				}
-				if(lc === 'iptal') {
+				if(lc === 'cancel') {
 					return {
 						value: null,
 						cancelled: 'user',
